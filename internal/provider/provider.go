@@ -18,6 +18,7 @@ import (
 	"github.com/biptec/terraform-provider-opnsense/internal/service/interfaces"
 	"github.com/biptec/terraform-provider-opnsense/internal/service/ipsec"
 	"github.com/biptec/terraform-provider-opnsense/internal/service/kea"
+	"github.com/biptec/terraform-provider-opnsense/internal/service/ndpproxy"
 	"github.com/biptec/terraform-provider-opnsense/internal/service/openvpn"
 	"github.com/biptec/terraform-provider-opnsense/internal/service/quagga"
 	"github.com/biptec/terraform-provider-opnsense/internal/service/routes"
@@ -309,6 +310,7 @@ func (p *opnsenseProvider) Resources(ctx context.Context) []func() resource.Reso
 		interfaces.Resources(ctx),
 		ipsec.Resources(ctx),
 		kea.Resources(ctx),
+		ndpproxy.Resources(ctx),
 		openvpn.Resources(ctx),
 		quagga.Resources(ctx),
 		routes.Resources(ctx),
